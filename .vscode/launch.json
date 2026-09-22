@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32F405 (J-Link/OpenOCD)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/${workspaceFolderBasename}.elf",
+            "preLaunchTask": "Build firmware (make.sh)",
+            "servertype": "openocd",
+            "configFiles": [
+                "${workspaceFolder}/.vscode/jlink-stm32f4.cfg"
+                // jlink jlink-stm32f4.cfg
+                // daplink daplink-stm32f4.cfg
+            ],
+            "searchDir": [
+                "/usr/share/openocd/scripts"
+            ],
+            "gdbPath": "/usr/bin/arm-none-eabi-gdb",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}

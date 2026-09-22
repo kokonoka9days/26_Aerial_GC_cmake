@@ -85,13 +85,13 @@ sudo apt install ninja-build
 sudo apt install clangd
 ```
 
-### cubemx创建新工程
+### 2. cubemx创建新工程
 创建新工程后将.vscode文件夹、download.sh、make.sh、.clangd复制到新工程对应路径下
 
 
 GDB 用于断点、单步、变量和内存检查；OpenOCD 通过 J-Link 或 DAPLink 的 SWD 接口完成下载和远程调试。
 
-### 2. 编译
+### 3. 编译
 
 使用 CMake 预设构建 Debug 版本：
 
@@ -129,6 +129,11 @@ ELF_FILE=build/Release/26_Aerial_GC_cmake.elf ./downloads.sh
 ```
 
 VS Code 可选安装 C/C++、clangd、Cortex-Debug 扩展。`.vscode/tasks.json` 提供构建/下载任务，`.vscode/launch.json` 提供 J-Link/OpenOCD 调试配置。
+
+### 4. vscode配置
+
+#### clangd配置
+ctrl+shift+p搜索 “clangd:Restart language server” 
 
 ## C/C++ 混合编译
 

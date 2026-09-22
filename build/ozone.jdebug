@@ -33,8 +33,8 @@ void OnProjectLoad (void) {
   //
   // User settings
   //
+  Edit.SysVar (VAR_HSS_SPEED, 1000000);
   File.Open ("$(ProjectDir)/Debug/26_Aerial_GC_cmake.elf");
-  Edit.SysVar (VAR_HSS_SPEED, FREQ_10_KHZ);
 }
 
 /*********************************************************************
